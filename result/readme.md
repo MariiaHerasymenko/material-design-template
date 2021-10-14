@@ -22,6 +22,30 @@
 
 <img width="495" alt="Screenshot 2021-10-10 at 16 55 01" src="https://user-images.githubusercontent.com/86781900/136700995-819f1049-2b91-4355-bdc4-6fff221a4299.png">
 
+7. From server side:<br />
+sudo apt-get install nodejs npm<br />
+sudo ln -s /usr/bin/nodejs /usr/local/bin/node<br />
+npm init (created package.json file)<br />
+sudo npm install ws<br />
+touch server.js <br />
+Pasted these contents:<br />
+<img width="483" alt="Screenshot 2021-10-14 at 16 22 54" src="https://user-images.githubusercontent.com/86781900/137326257-aaec8279-9af7-41e9-a34f-8e4c30d9c201.png">
+sudo vi /etc/nginx/sites-available/websocket<br />
+node server.js<br />
+
+From client side:<br />
+curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" -H "Host: echo.websocket.org" -H "Origin: http://www.websocket.org" http://34.125.201.185
+<img width="863" alt="Screenshot 2021-10-14 at 20 30 18" src="https://user-images.githubusercontent.com/86781900/137367596-5b014562-8772-4e59-a23e-fc6d028bda02.png">
+
+From server side:<br />
+sudo vi /etc/nginx/sites-enabled/default<br />
+
+<img width="768" alt="Screenshot 2021-10-14 at 23 02 16" src="https://user-images.githubusercontent.com/86781900/137387385-502bc25e-7a43-49de-af15-71861ddfc01d.png">
+
+sudo nginx -s reload<br />
+curl -i http://34.125.201.185/img/avatar1.png<br />
+
+<img width="617" alt="Screenshot 2021-10-14 at 23 03 59" src="https://user-images.githubusercontent.com/86781900/137387580-5d842c76-ec0b-432f-b00d-d4a481aba77d.png">
 8. git checkout -b feature<br />
    (Add some changes in existing file)<br />
    git add .<br />
