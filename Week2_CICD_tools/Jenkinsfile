@@ -1,4 +1,4 @@
-node ("agent1") {
+node {
     stage("NodeJS setup") {
         env.NODEJS_HOME="${tool 'nodejs'}"
         env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
@@ -9,7 +9,7 @@ node ("agent1") {
         git url: "https://github.com/MariiaHerasymenko/material-design-template"
     }
     stage("Compress") {
-            parallel ([
+            parallel (
                 "Compress-js": {
                     sh "ls www/js/ | xargs -I{i} uglifyjs www/js/{i} -o www/min/{i} -c"
 
@@ -17,7 +17,7 @@ node ("agent1") {
                 "Compress-css": {
                     sh "ls www/css/ | xargs -I{i} cleancss www/css/{i} -o www/min/{i}"
                 }
-            ])  
+            )  
     }
     stage("Archive") {
         sh "tar --exclude='www/js' --exclude='www/css' --exclude='.git' -zcvf results.tar.gz *"
