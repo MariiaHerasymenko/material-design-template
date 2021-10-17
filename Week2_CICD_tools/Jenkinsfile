@@ -19,7 +19,7 @@ node ("agent1") {
                 }
             ])  
     }
-    stage("Archiving results") {
+    stage("Archive") {
         sh "tar --exclude='www/js' --exclude='www/css' --exclude='.git' -zcvf results.tar.gz *"
         archiveArtifacts artifacts: 'results.tar.gz', onlyIfSuccessful: true
     }
