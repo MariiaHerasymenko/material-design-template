@@ -36,3 +36,12 @@ Scan by webhook <br />
 Github: Setting/webhooks/created webhook <br />
 <img width="971" alt="Screenshot 2021-10-17 at 18 10 48" src="https://user-images.githubusercontent.com/86781900/137633397-2eef94f2-171b-4c0f-b8d6-084c711dc9cc.png">
 
+*Spin up VM with installed artifactory<br />
+sudo apt update <br />
+sudo apt install openjdk-11-jdk <br />
+wget -O artifactory-pro.deb "https://releases.jfrog.io/artifactory/artifactory-pro-debs/pool/jfrog-artifactory-pro/jfrog-artifactory-pro-[RELEASE].deb" <br />
+sudo apt install ./artifactory-pro.deb -y <br />
+sudo systemctl start artifactory.service <br />
+<img width="1214" alt="Screenshot 2021-10-18 at 13 50 14" src="https://user-images.githubusercontent.com/86781900/137717351-6246396b-ad84-4ab7-8011-e309e774642e.png">
+
+
