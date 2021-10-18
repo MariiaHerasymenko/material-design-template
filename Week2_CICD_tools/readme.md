@@ -44,4 +44,10 @@ sudo apt install ./artifactory-pro.deb -y <br />
 sudo systemctl start artifactory.service <br />
 <img width="1214" alt="Screenshot 2021-10-18 at 13 50 14" src="https://user-images.githubusercontent.com/86781900/137717351-6246396b-ad84-4ab7-8011-e309e774642e.png">
 
-
+*Add new stage for publishing artifacts into Artifactory <br />
+Install plugin Artifactory<br />
+Config JFrog in a Manage Jenkins -> Configure System<br />
+Created local repo in a Jfrog<br />
+Add stage “Artifactory” in a Jenkinsfile<br />
+<img width="917" alt="Screenshot 2021-10-18 at 18 54 27" src="https://user-images.githubusercontent.com/86781900/137766392-c4a0e033-393a-4abb-be1f-bba63718584b.png">
+<img width="921" alt="Screenshot 2021-10-18 at 18 53 19" src="https://user-images.githubusercontent.com/86781900/137766409-fc335dd8-7d37-4bf0-b0d3-5e5398f8cbf1.png">
